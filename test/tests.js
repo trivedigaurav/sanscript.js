@@ -16,8 +16,9 @@ const names = {
     gurmukhi         : "Gurmukhi",
     hk               : "Harvard-Kyoto",
     iast             : "IAST",
+    iast_ascii       : "IAST ASCII",
     itrans           : "ITRANS",
-    itrans_dravidian : "ITRANS",
+    itrans_dravidian : "ITRANS Dravidian",
     kannada          : "Kannada",
     kolkata          : "Kolkata",
     malayalam        : "Malayalam",
@@ -100,6 +101,16 @@ const data = {
         putra      : "putra",
         naraIti    : "nara iti",
         sentence   : "dharmakṣetre kurukṣetre samavetā yuyutsavaḥ ।",
+    },
+    iast_ascii : {
+        vowels     : "a -a i -i u -u r. -r. l. -l. e ai o au",
+        marks      : "ka kh-a gi gh-i .nu c-u chr. j-r. jhl. ~n-l. t.e t.hai d.o d.hau n.am. tah. th",
+        consonants : "ka kha ga gha .na ca cha ja jha ~na t.a t.ha d.a d.ha n.a ta tha da dha na pa pha ba bha ma",
+        other      : "ya ra la va 'sa s.a sa ha _la",
+        symbols    : "OM | || 0 1 2 3 4 5 6 7 8 9",
+        putra      : "putra",
+        naraIti    : "nara iti",
+        sentence   : "dharmaks.etre kuruks.etre samavet-a yuyutsavah. |",
     },
     cyrillic : {
         vowels     : "а а̄ и ӣ у ӯ р̣ р̣̄ л̣ л̣̄ э аи о ау",
@@ -222,7 +233,7 @@ QUnit.test("Scheme definitions", function () {
  * Test that Sanscript.isRomanScheme returns true for all roman schemes.
  */
 QUnit.test("Roman scheme membership", function () {
-    const roman = ["iast", "itrans", "hk", "kolkata", "slp1", "velthuis", "wx"];
+    const roman = ["iast", "iast_ascii", "itrans", "hk", "kolkata", "slp1", "velthuis", "wx"];
     const other = ["bengali", "devanagari", "gujarati", "gurmukhi", "kannada",
         "malayalam", "oriya", "tamil", "telugu"];
 
@@ -408,6 +419,15 @@ QUnit.test("Harvard-Kyoto to IAST", function () {
     letterTests(from, to, f);
     textTests(from, to, f);
     f("tAmxiti", "tāmxiti", "Undefined letters");
+});
+
+QUnit.test("Harvard-Kyoto to IAST ASCII", function () {
+    const from = data.hk;
+    const to = data.iast_ascii;
+    const f = transHelper("hk", "iast_ascii");
+    letterTests(from, to, f);
+    textTests(from, to, f);
+    f("tAmxiti", "t-amxiti", "Undefined letters");
 });
 
 QUnit.test("ITRANS to Devanagari", function () {
