@@ -269,7 +269,7 @@ I have included a simplified IAST scheme that can be used to edit Sanskrit docum
    </td>
    <td rowspan="2" > ळ
 <p>
-<strong>_la</strong>
+<strong>~la</strong>
    </td>
   </tr>
   <tr>
