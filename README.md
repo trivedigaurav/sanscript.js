@@ -491,6 +491,16 @@ I have included a simplified IAST scheme that can be used to edit Sanskrit docum
 
 *Devanagari:*         नराः गच्छन्ति ।
 
+#### Vedic Accents
+
+*IAST Simplified:*    a\_gnim-i\!~le pu\_rohi\!tam. ya\!j~nasya\! de\_vamr.\_tvija\!m
+
+*IAST:*               a॒gnimī॑ḻe pu॒rohi॑taṃ ya॑jñasya॑ de॒vamṛ॒tvija॑m
+
+*ITRANS:*             a\_gnimI\'Le pu\_rohi\'taM ya\'j~nasya\' de\_vamRRi\_tvija\'m
+
+*Devanagari:*         अ॒ग्निमी॑ळे पु॒रोहि॑तं य॑ज्ञस्य॑ दे॒वमृ॒त्विज॑म्
+
 ### Disabling transliteration
 When Sanscript sees the token `##`, it toggles the transliteration state:
 
