@@ -615,3 +615,15 @@ QUnit.test("Non-Sanskrit letters", function () {
     ori(".DU .DhU YU", "ଡୂ ଢୂ ଯୂ");
     tam("RI", "றீ");
 });
+
+// -----------------------------------------------------------------------
+
+QUnit.module("IAST Ascii");
+
+QUnit.test("Accent", function () {
+    const f = transHelper("iast_ascii", "devanagari");
+    f("a\\_gnim-i\\!~le pu\\_rohi\\!tam. ya\\!j~nasya\\! de\\_vamr.\\_tvija\\!m", "अ॒ग्निमी॑ळे पु॒रोहि॑तं य॑ज्ञस्य॑ दे॒वमृ॒त्विज॑म्");
+    f("nah.\\! nah.\\_", "नः॑ नः॒", "Visarga + accent");
+    f("tam.\\! tam.\\_", "तं॑ तं॒", "Anusvara + accent");
+});
+
