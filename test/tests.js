@@ -106,7 +106,7 @@ const data = {
         vowels     : "a -a i -i u -u r. -r. l. -l. e ai o au",
         marks      : "ka kh-a gi gh-i .nu c-u chr. j-r. jhl. ~n-l. t.e t.hai d.o d.hau n.am. tah. th",
         consonants : "ka kha ga gha .na ca cha ja jha ~na t.a t.ha d.a d.ha n.a ta tha da dha na pa pha ba bha ma",
-        other      : "ya ra la va 'sa s.a sa ha _la",
+        other      : "ya ra la va 'sa s.a sa ha ~la",
         symbols    : "OM | || 0 1 2 3 4 5 6 7 8 9",
         putra      : "putra",
         naraIti    : "nara iti",
