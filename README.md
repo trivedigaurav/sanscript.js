@@ -375,7 +375,7 @@ I have included a simplified IAST scheme that can be used to edit Sanskrit docum
 <p>
 <strong>d.au</strong>
    </td>
-   <td rowspan="2" >थ्
+   <td rowspan="2" >थ
 <p>
 <strong>tha</strong>
    </td>
